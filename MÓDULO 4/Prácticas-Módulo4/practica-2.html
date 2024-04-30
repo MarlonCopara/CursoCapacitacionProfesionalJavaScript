@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Añadir un nuevo párrafo</title>
+</head>
+<body>
+  <p>Primer párrafo.</p>
+  <p>Segundo párrafo.</p>
+  <p>Tercer párrafo.</p>
+
+  <script>
+    // Crear un nuevo elemento <p>
+    var nuevoParrafo = document.createElement('p');
+
+    // Establecer el texto del nuevo párrafo
+    nuevoParrafo.textContent = 'Texto del nuevo párrafo';
+
+    // Obtener el elemento <body>
+    var body = document.getElementsByTagName('body')[0];
+
+    // Añadir el nuevo párrafo como hijo del <body>
+    body.appendChild(nuevoParrafo);
+  </script>
+</body>
+</html>

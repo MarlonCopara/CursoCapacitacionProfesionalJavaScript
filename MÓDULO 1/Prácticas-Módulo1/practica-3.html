@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+</head>
+<body>
+    <p id="mensaje">Un párrafo de texto.</p>
+
+ 
+    <script>
+        // Seleccionar el párrafo por su ID
+        var parrafo = document.getElementById("mensaje");
+
+        // Agregar un evento click al párrafo
+        parrafo.addEventListener("click", function() {
+            alert("¡Hiciste clic en el párrafo!");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "correo": "juan@example.com",
+        "edad": 30,
+        "ciudad": "Ciudad de México"
+      },
+      {
+        "id": 2,
+        "nombre": "María García",
+        "correo": "maria@example.com",
+        "edad": 25,
+        "ciudad": "Madrid"
+      },
+      {
+        "id": 3,
+        "nombre": "Carlos Rodríguez",
+        "correo": "carlos@example.com",
+        "edad": 40,
+        "ciudad": "Buenos Aires"
+      },
+      {
+        "id": 4,
+        "nombre": "Ana López",
+        "correo": "ana@example.com",
+        "edad": 35,
+        "ciudad": "São Paulo"
+      },
+      {
+        "id": 5,
+        "nombre": "Laura Smith",
+        "correo": "laura@example.com",
+        "edad": 28,
+        "ciudad": "New York"
+      }
+    ]
+  }
+  

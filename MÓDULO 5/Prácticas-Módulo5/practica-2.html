@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario dinámico</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#agregarCampo").click(function() {
+                $("#camposExtras").append('<input type="text" name="campo[]" placeholder="Campo adicional"><br>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Formulario con campos dinámicos</h2>
+    <form>
+        <input type="text" name="nombre" placeholder="Nombre"><br>
+        <input type="email" name="correo" placeholder="Correo electrónico"><br>
+        <div id="camposExtras">
+
+        </div>
+        <button id="agregarCampo" type="button">Agregar campo</button>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

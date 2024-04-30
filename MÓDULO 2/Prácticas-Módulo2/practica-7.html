@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo del Objeto document</title>
+  <script>
+    var myImages = new Array("https://media0.giphy.com/media/3oz8xNVLJ8m2aDxyIE/200.webp?cid=790b7611vs2rfoh6hwyiotlbamrv2ofrx51r0uqzosifyibf&ep=v1_gifs_search&rid=200.webp&ct=g", "https://media0.giphy.com/media/3oz8xZKXxXR0Amtlde/200.webp?cid=790b7611vs2rfoh6hwyiotlbamrv2ofrx51r0uqzosifyibf&ep=v1_gifs_search&rid=200.webp&ct=g", "https://media4.giphy.com/media/lbthrW0KDsqCs8CcrX/200.webp?cid=ecf05e47il9l1veho8m5i8q8qeiyowmshhd5cynx1iv1umvf&ep=v1_gifs_search&rid=200.webp&ct=g", "https://media2.giphy.com/media/fQElxWvoOe9eH0jxi8/giphy.webp?cid=ecf05e47il9l1veho8m5i8q8qeiyowmshhd5cynx1iv1umvf&ep=v1_gifs_search&rid=giphy.webp&ct=g"); 
+
+    function changeImg(imgNumber) {
+      var imgClicked = document.images[imgNumber];
+
+      var newImgNumber = Math.floor(Math.random() * myImages.length);
+
+      while (imgClicked.src === myImages[newImgNumber]) {
+        newImgNumber = (newImgNumber + 1) % myImages.length; 
+      }
+
+      imgClicked.src = myImages[newImgNumber];
+      return false; 
+    }
+  </script>
+</head>
+<body>
+  <a href="" onclick="return changeImg(0)">
+    <img src="usa.gif" alt="Image 1" border="0">
+  </a>
+  <a href="" onclick="return changeImg(1)">
+    <img src="mexico.gif" alt="Image 2" border="0">
+  </a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecutar Código JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Objeto JSON con al menos otro objeto y un array de objetos como propiedades
+        var jsonData = {
+            "person": {
+                "name": "John",
+                "age": 30
+            },
+            "cars": [
+                { "brand": "Toyota", "model": "Corolla" },
+                { "brand": "Honda", "model": "Civic" }
+            ]
+        };
+
+        var jsonString = JSON.stringify(jsonData);
+        console.log("Objeto JSON transformado a String:");
+        console.log(jsonString);
+
+        // Transformar el String a objeto JSON
+        var parsedData = JSON.parse(jsonString);
+        console.log("\nString transformado de nuevo a objeto JSON:");
+        console.log(parsedData);
+
+        // Verificar que se mantienen todas las propiedades
+        console.log("\nVerificación de propiedades:");
+        console.log("Nombre:", parsedData.person.name);
+        console.log("Edad:", parsedData.person.age);
+        console.log("Carros:", parsedData.cars);
+    </script>
+</body>
+</html>

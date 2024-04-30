@@ -1,0 +1,47 @@
+{
+    "PhoneBook": {
+      "objectid": "1",
+      "owner": {
+        "objectid": "2",
+        "phone": "123456789",
+        "name": "John Doe",
+        "title": "Mr.",
+        "age": 30,
+        "address": {
+          "objectid": "3",
+          "street": "123 Main Street",
+          "city": "Anytown",
+          "state": "CA"
+        }
+      },
+      "contacts": [
+        {
+          "objectid": "4",
+          "phone": "987654321",
+          "name": "Jane Smith",
+          "title": "Ms.",
+          "age": 25,
+          "address": {
+            "objectid": "5",
+            "street": "456 Elm Street",
+            "city": "Othertown",
+            "state": "NY"
+          }
+        },
+        {
+          "objectid": "6",
+          "phone": "555555555",
+          "name": "Bob Johnson",
+          "title": "Dr.",
+          "age": 40,
+          "address": {
+            "objectid": "7",
+            "street": "789 Oak Street",
+            "city": "Somewhere",
+            "state": "TX"
+          }
+        }
+      ]
+    }
+  }
+  

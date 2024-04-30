@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <title>Ejemplo del Objeto document</title>
+  </head>
+<body>
+  <img id="img1" src="" alt="Image" border="0" width="200" height="150">
+  <script>
+  // Image sources stored in an array
+  var images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png", "https://rosamarfil.es/tutoriales/wp-content/uploads/2019/08/java-logo-png.png", "https://miro.medium.com/v2/resize:fit:600/1*ljHUhFnaBissdRBe7DIo6g.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"];
+
+  // Prompt user for input with validation
+  var imgIndex = parseInt(prompt("Enter a number between 0 and 3:", ""));
+  if (imgIndex >= 0 && imgIndex < images.length) {
+    document.getElementById("img1").src = images[imgIndex];
+  } else {
+    alert("Invalid number. Please enter a number between 0 and 3.");
+  }
+  </script>
+</body>
+</html>

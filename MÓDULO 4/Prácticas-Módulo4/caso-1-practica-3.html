@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+    <style>
+        .resaltado {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejemplo de Manejo de Eventos</h2>
+
+    <!-- Parte 1: Manejadores de eventos como atributos HTML -->
+    <input type="button" value="Haz clic aquí" onclick="mostrarAlerta()">
+
+    <!-- Parte 2: Manejadores de eventos y variable this -->
+    <div id="contenido" style="width:180px; height:80px; border:thin solid silver"
+         onmouseover="cambiarColor('green')" onmouseout="cambiarColor('red')">
+        Sección de contenidos...
+    </div>
+
+    <!-- Parte 3: Manejadores de eventos como funciones externas -->
+    <input type="button" value="Pasar el ratón aquí" onmouseover="resaltar(this)" onmouseout="quitarResaltado(this)">
+
+    <!-- Parte 4: Manejadores de eventos semánticos -->
+    <input id="botonSemantico" type="button" value="Haz clic aquí para mostrar un mensaje">
+
+    <script>
+        // Parte 1: Manejadores de eventos como atributos HTML
+        function mostrarAlerta() {
+            alert('Gracias por hacer clic!');
+        }
+
+        // Parte 2: Manejadores de eventos y variable this
+        function cambiarColor(color) {
+            document.getElementById('contenido').style.borderColor = color;
+        }
+
+        // Parte 3: Manejadores de eventos como funciones externas
+        function resaltar(elemento) {
+            elemento.classList.add('resaltado');
+        }
+
+        function quitarResaltado(elemento) {
+            elemento.classList.remove('resaltado');
+        }
+
+        // Parte 4: Manejadores de eventos semánticos
+        function mostrarMensaje() {
+            alert('¡Gracias por hacer clic en el botón semántico!');
+        }
+
+        // Asignar la función externa al elemento
+        document.getElementById("botonSemantico").onclick = mostrarMensaje;
+    </script>
+</body>
+</html>

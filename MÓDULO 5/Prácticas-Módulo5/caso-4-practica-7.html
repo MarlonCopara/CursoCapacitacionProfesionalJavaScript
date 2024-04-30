@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de JSON</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#submitButton").click(function() {
+                $.getJSON("ejemploJSON.json", function(data) {
+                    $("#jsonText").val(JSON.stringify(data));
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Consulta de JSON</h2>
+    <form>
+        <label for="jsonText">Contenido JSON:</label><br>
+        <textarea id="jsonText" rows="4" cols="50"></textarea><br>
+        <input type="button" id="submitButton" value="Obtener JSON">
+    </form>
+</body>
+</html>

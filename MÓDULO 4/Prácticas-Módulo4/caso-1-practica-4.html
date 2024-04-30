@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos en JavaScript y JSON</title>
+</head>
+<body>
+    <h2>Información del Usuario</h2>
+    <div id="userInfo"></div>
+
+    <script>
+        // Paso 1: Crear un objeto JSON que represente la información del usuario
+        var usuario = {
+            nombre: "Juan",
+            apellido: "Pérez",
+            edad: 30,
+            correo: "juan@example.com"
+        };
+
+        // Paso 2: Convertir el objeto JSON a una cadena de texto
+        var usuarioString = JSON.stringify(usuario);
+
+        // Paso 3: Transformar la cadena de texto de vuelta a un objeto JSON
+        var usuarioParseado = JSON.parse(usuarioString);
+
+        // Paso 4: Utilizar el DOM para mostrar la información del usuario
+        var userInfoDiv = document.getElementById("userInfo");
+        userInfoDiv.innerHTML = "<p>Nombre: " + usuarioParseado.nombre + "</p>" +
+                                 "<p>Apellido: " + usuarioParseado.apellido + "</p>" +
+                                 "<p>Edad: " + usuarioParseado.edad + "</p>" +
+                                 "<p>Correo: " + usuarioParseado.correo + "</p>";
+    </script>
+</body>
+</html>

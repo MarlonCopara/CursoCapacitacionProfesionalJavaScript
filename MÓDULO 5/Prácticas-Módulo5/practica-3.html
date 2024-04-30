@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galería de imágenes</title>
+    <style>
+        /* Estilos para la galería */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".gallery img").click(function() {
+                var modalContent = '<span class="close">&times;</span><img class="modal-content" src="' + $(this).attr("src") + '">';
+                $(".modal").html(modalContent).css("display", "block");
+                $(".close").click(function() {
+                    $(".modal").css("display", "none");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://www.itmastersmag.com/wp-content/uploads/2021/01/shutterstock_1078387013-scaled.jpg">
+        <img src="https://edteam-media.s3.amazonaws.com/blogs/original/4278f0b3-b02e-4349-8d3c-6b924e3c2865.jpg">
+        <img src="https://edteam-media.s3.amazonaws.com/community/original/3b3c7f4a-4617-4def-922c-3ae1b90c657f.jpg">
+    </div>
+    <div class="modal"></div>
+</body>
+</html>

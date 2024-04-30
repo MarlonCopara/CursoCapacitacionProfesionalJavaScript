@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de datos JSON</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("datos.json", function(data) {
+                $.each(data.usuarios, function(index, usuario) {
+                    $("#resultados").append("<li>" + usuario.nombre + ": " + usuario.ciudad + "</li>");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Datos JSON consultados</h2>
+    <ul id="resultados"></ul>
+</body>
+</html>

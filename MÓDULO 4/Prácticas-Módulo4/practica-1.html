@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obtener y mostrar elementos <p></title>
+</head>
+<body>
+  <p>Primer párrafo.</p>
+  <p>Segundo párrafo.</p>
+  <p>Tercer párrafo.</p>
+
+  <script>
+    // Seleccionar todos los elementos <p>
+    var parrafos = document.getElementsByTagName('p');
+
+    // Inicializar una cadena para almacenar el contenido de los párrafos
+    var contenidoParrafos = '';
+
+    // Recorrer todos los elementos <p> y agregar su contenido a la cadena
+    for (var i = 0; i < parrafos.length; i++) {
+      contenidoParrafos += parrafos[i].textContent + '\n';
+    }
+
+    // Mostrar el contenido de los párrafos en un alert
+    alert(contenidoParrafos);
+  </script>
+</body>
+</html>
