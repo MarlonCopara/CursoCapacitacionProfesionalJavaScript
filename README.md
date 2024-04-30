@@ -1,4 +1,4 @@
-# CursoCapacitacionProfesionalJavaScript
+# Curso de Capacitación Profesional en JavaScript
 
 Marlon Alexis Copara Allauca 
 Software 8 "A"
